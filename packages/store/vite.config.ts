@@ -9,7 +9,8 @@ export default defineConfig({
     federation({
       name: 'store',
       remotes: {
-        cart: 'http://localhost:4173/assets/remoteEntry.js',
+        cart: 'http://localhost:5500/assets/remoteEntry.js',
+        items: 'http://localhost:5001/assets/remoteEntry.js',
       },
       shared: ['react', 'react-dom'],
     })

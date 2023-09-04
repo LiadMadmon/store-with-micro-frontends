@@ -1,13 +1,14 @@
 import { lazy, Suspense } from 'react'
 import './App.css'
-const Cart = lazy(() => import('cart/Cart'));
+const CartItems = lazy(() => import('cart/CartItems'));
+const ItemList = lazy(() => import('items/ItemList'));
 
 function Store() {
   return (
       <div>
-        <h1>Host Application</h1>
         <Suspense fallback={<div>Loading Remote Component...</div>}>
-          <Cart />
+          <CartItems />
+          <ItemList />
         </Suspense>
       </div>
   )
