@@ -13,7 +13,6 @@ export default defineConfig({
         './CartItems': './src/components/CartItems',
         './CartCountSummary': './src/components/CartCountSummary',
       },
-      shared: ['react', 'react-dom'],
     })
   ],
   build: {

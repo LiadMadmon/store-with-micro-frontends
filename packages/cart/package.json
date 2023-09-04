@@ -1,5 +1,5 @@
 {
-  "name": "cart",
+  "name": "@store/cart",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +11,10 @@
     "deploy": "pnpm run build && pnpm run preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.7",
+    "@mui/material": "^5.14.7",
     "@originjs/vite-plugin-federation": "^1.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
