@@ -1,5 +1,5 @@
-## store-with-micro-frontends
-# Initialization
+# store-with-micro-frontends
+## Initialization
 **Run the cart microfrontend** <br />
 cd packages/cart && pnpm i & pnpm run deploy
 
