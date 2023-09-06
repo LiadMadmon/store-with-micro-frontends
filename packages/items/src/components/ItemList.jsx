@@ -11,27 +11,25 @@ const ItemList = ({
     items,
 }) => {
     const itemsInCart = Object.keys(itemsInCartIds).length
-
+    
     return (
         <ItemListRoot>
-            <Box>
-                <ItemsListHeaderWrapper>
-                    <Typography marginBottom={2} variant='h6'>Items:</Typography>
-                    <Suspense fallback={<Box>Loading Remote Component...</Box>}>
-                        <CartCountSummary itemsInCart={itemsInCart} />
-                    </Suspense>
-                </ItemsListHeaderWrapper>
-                <ListItemsGridWrapper container>
-                    {items.map((item) => 
-                        <ListItem
-                            handleAddOrRemoveFromCartClicked={handleAddOrRemoveFromCartClicked}
-                            key={item.id} 
-                            isInCart={itemsInCartIds[item.id]} 
-                            item={item} 
-                        />
-                    )}
-                </ListItemsGridWrapper>
-            </Box>
+            <ItemsListHeaderWrapper>
+                <Typography marginBottom={2} variant='h6'>Items:</Typography>
+                <Suspense fallback={<Box>Loading Remote Component...</Box>}>
+                    <CartCountSummary itemsInCart={itemsInCart} />
+                </Suspense>
+            </ItemsListHeaderWrapper>
+            <ListItemsGridWrapper container>
+                {items.map((item) =>
+                    <ListItem
+                        handleAddOrRemoveFromCartClicked={handleAddOrRemoveFromCartClicked}
+                        key={item.id} 
+                        isInCart={itemsInCartIds[item.id]} 
+                        item={item} 
+                    />
+                )}
+            </ListItemsGridWrapper>
         </ItemListRoot>
     );
 }

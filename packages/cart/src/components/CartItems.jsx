@@ -1,16 +1,14 @@
 import React from 'react';
-import { Box, Typography } from "@mui/material";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { Typography } from "@mui/material";
+import { CartItem } from './CartItem';
+import { CartItemsWrapper } from './CartItem.styled';
 
-const CartItems = ({ itemsInCart }) => {
+const CartItems = ({ items }) => {
     return (
-        <div>8</div>
-        // <Box display='flex' alignItems='center'>
-        //     <Typography marginRight={1} variant='body1'>
-        //         {itemsInCart}
-        //     </Typography>
-        //     <AddShoppingCartIcon />
-        // </Box>
+        <CartItemsWrapper>
+            <Typography variant='body1'>Cart:</Typography>
+            {items.map((item) => <CartItem key={item.id} item={item} />)}
+        </CartItemsWrapper>
     );
 }
 

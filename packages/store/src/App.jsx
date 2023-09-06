@@ -1,7 +1,7 @@
 import React, { useState, Suspense } from 'react';
 import { ItemsMock } from './tests/mocks/items';
 import { StoreContentWrapper, StoreRoot } from './App.styled';
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const CartItems = React.lazy(() => import('Cart/CartItems'));
 const ItemList = React.lazy(() => import('Items/ItemList'));
@@ -28,12 +28,14 @@ function Store() {
       <Typography variant='h4'>My Store</Typography>
       <Suspense fallback={<div>Loading Remote Component...</div>}>
         <StoreContentWrapper>
-          <ItemList 
-            handleAddOrRemoveFromCartClicked={handleAddOrRemoveFromCartClicked}
-            itemsInCartIds={itemsInCartIds}
-            items={ItemsMock}
-          />
-          <CartItems />
+          <Box>
+            <ItemList 
+              handleAddOrRemoveFromCartClicked={handleAddOrRemoveFromCartClicked}
+              itemsInCartIds={itemsInCartIds}
+              items={ItemsMock}
+            />
+          </Box>
+          <CartItems items={ItemsMock.filter((item) => itemsInCartIds[item.id])} />
         </StoreContentWrapper>
       </Suspense>
     </StoreRoot>
