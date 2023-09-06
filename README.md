@@ -7,10 +7,10 @@ Try to make the layout more responsive and the design more slick.<br />
 # store-with-micro-frontends
 ## Initialization
 **Run the cart microfrontend** <br />
-cd packages/cart && npm i & start
+cd packages/cart && npm i && npm start
 
 **Run the items microfrontend** <br />
-cd packages/items && npm i & start
+cd packages/items && npm i && npm start
 
 **Consume them using the store project** <br />
-cd packages/store && npm i & npm start
+cd packages/store && npm i && npm start
