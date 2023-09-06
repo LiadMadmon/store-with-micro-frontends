@@ -1,10 +1,10 @@
 # store-with-micro-frontends
 ## Initialization
 **Run the cart microfrontend** <br />
-cd packages/cart && pnpm i & pnpm run deploy
+cd packages/cart && npm i & start
 
 **Run the items microfrontend** <br />
-cd packages/items && pnpm i & pnpm run deploy
+cd packages/items && npm i & start
 
 **Consume them using the store project** <br />
-cd packages/store && pnpm i & pnpm dev
+cd packages/store && npm i & npm start
